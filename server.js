@@ -147,7 +147,7 @@ app.post("/login", function(req, res) {
 
 });
 
-app.get("/user", (req, res) => {
+app.get("/profile", (req, res) => {
     if(req.session.user)
     {
     const sessionuser = req.session.user;
@@ -156,7 +156,7 @@ app.get("/user", (req, res) => {
     }
     else
     {
-        res.send('<p>You have not logged in. Please visit<a href='/login.html'>the login page</a></p>');
+        res.send("<p>You have not logged in. Please visit<a href='/login.html'>the login page</a></p>");
     }
 });
 
